@@ -1,0 +1,19 @@
+.btn {
+    text-decoration: none;
+    padding:15px 60px;
+    border-radius:100px;
+    font-weight: 700;
+    &.white {
+      background:white;
+      border:2px solid lightgray;
+      color:$main-black !important;
+    }
+    &.pink {
+       background:$main-color;
+       color:white !important;
+    }
+    &:hover{
+        color: white !important;
+        background: black;
+    }
+}

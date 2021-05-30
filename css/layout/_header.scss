@@ -1,0 +1,117 @@
+.header {
+    padding-top: 80px;
+    .shadow-box {
+        height: 80px;
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+    }
+    .shadow-light {
+        box-shadow:0 10px 50px 20px rgba(0,0,0,.04);
+    }
+}
+//header-nav
+.main-nav{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:25px 0;
+    @include transition;
+    .wrapper{
+        display: flex;
+        align-items: center;
+        .logo {
+            color:$main-black;
+            margin-right: 50px;
+        }
+        svg {
+            width: 165px;
+            path {
+                @include transition;
+              }
+            /* g.no-letters{
+                .chevron{
+                    transform:translateX(-130px);
+                    transition: .2s ease-in-out;
+                }
+                path:not(.first-letter):not(.chevron){
+                    display: none;
+                    }
+            } */
+        }
+        g.active {
+            path {
+              &.chevron {
+                transform: translate(-135px, -9px);
+              }
+            }
+            & > path:not(.show) {
+              transform:translateX(-20px);
+              opacity:0;
+            }
+          }
+
+        a:not(.logo) {
+            text-decoration: none;
+            color:#57585c;
+            margin:0 50px 0 0;
+            @include transition;
+            &:hover {
+            color:$main-black;
+            }
+        }
+        .hidden-nav {
+            @include transition;
+        }
+        .btns-nav {
+            margin-left:auto;
+            @include transition;
+            a {
+              margin-right: 0 !important;
+              margin-left: 25px !important;
+            }
+        }
+    }
+    &.active {
+        background:white;
+        box-shadow:0 10px 50px 20px rgba(0,0,0,.04);
+    }
+}
+//header-hero
+h1 {
+    text-align: center;
+    font-size: 110px;
+    margin-top: 25px;
+    font-weight: normal;
+    span {
+      font-size: 35px;
+      color:$main-color;
+      display: block;
+      transform:translateY(15px);
+      font-weight: 700;
+    }
+}
+.bike {
+    max-width: 940px;
+    margin:0 auto;
+    &>img:nth-of-type(1){
+        transform:translateY(-115px);
+    }
+    &>img:nth-of-type(2){
+        width: 100%;
+        transform:translateY(-180px) scale(1.5);
+    }
+}
+.btns-cta{
+    margin-top: -230px;
+    text-align: center;
+    position: relative;
+    z-index:2;
+    p {
+        margin-top: 50px;
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,29 @@
+::selection {
+    background:rgba($main-color,.1);
+}
+
+body{
+    background:#fdfdfd;
+    font-family:'Roboto';
+    color:$main-black;
+}
+.wrapper {
+    width: 90%;
+    margin:0 auto;
+}
+img {
+    max-width:100%;
+}
+.hidden {
+    visibility:hidden;
+    opacity:0;
+}  
+.pink {
+    color:$main-color;
+}
+
+
+
+
+    
+    
